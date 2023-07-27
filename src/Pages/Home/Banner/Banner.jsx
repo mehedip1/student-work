@@ -7,7 +7,7 @@ import img3 from '../../../assets/photo/img3.jpg'
 import img4 from '../../../assets/photo/img4.jpg'
 import img5 from '../../../assets/photo/img5.jpg'
 import img6 from '../../../assets/photo/img6.jpg'
-import SectionTittle from '../../../components/Section/SectionTittle';
+
 
 
 
