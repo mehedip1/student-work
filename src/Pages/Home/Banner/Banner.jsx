@@ -18,7 +18,7 @@ const Banner = () => {
         <AwesomeSlider className='img-item'>
        <div >
        <img src={img3} />
-       <h2 className='text-4xl text-center text-green-700 uppercase -mt-20'>Welcom my page</h2>
+       <h2 className='text-4xl text-center text-sky-700 uppercase -mt-20'>Welcom my page</h2>
        </div>
         <div>
             <img src={img2} />

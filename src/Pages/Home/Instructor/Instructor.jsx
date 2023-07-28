@@ -14,10 +14,7 @@ const Instructor = () => {
     useEffect(() =>{
         fetch('category.json')
         .then(res => res.json())
-        .then(data => {
-            const nameItems = data.filter(item => item.category === 'name');
-            setCategory(nameItems)
-        })
+        .then(data => setCategory(data))
 
     }
     )
@@ -27,7 +24,7 @@ const Instructor = () => {
             <SectionTittle heading="Our Top Instructor">
 
             </SectionTittle>
-            <div>
+            <div className='grid md:grid-cols-3 gap-4'>
                 {
                     category.map(item => <NameItem 
                     key={item._id}
