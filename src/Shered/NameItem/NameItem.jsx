@@ -8,9 +8,9 @@ const NameItem = ({item}) => {
     <figure>
     <img src={img} alt="" />
     </figure>
-  <div className="card-body">
+  <div className="card-body flex flex-col items-center">
     <h2 className="card-title">{name}</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores incidunt suscipit commodi similique nostrum ipsum repudiandae, architecto veniam minus quae, hic dolore recusandae natus deleniti quaerat exercitationem praesentium, eius pariatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     <div className="card-actions text-center">
       <button className="btn btn-primary">Book Now</button>
     </div>
