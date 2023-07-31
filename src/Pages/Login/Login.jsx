@@ -1,7 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { loadCaptchaEnginge, LoadCanvasTemplate,  validateCaptcha } from 'react-simple-captcha';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import { useEffect } from "react";
+import { useState } from "react";
+import Swal from 'sweetalert2'
 
 
 const Login = () => {
@@ -12,6 +15,17 @@ const Login = () => {
      const location = useLocation();
 
      const from = location.state?.from?.pathname || "/";
+
+
+   
+     const [disabled, setDisabled] = useState(true);
+
+
+     useEffect(() =>{
+      loadCaptchaEnginge(6);
+
+     }
+     ,[])
 
 
     const handleLogin = event =>{
@@ -26,7 +40,7 @@ const Login = () => {
             console.log(user);
 
             Swal.fire({
-                title: 'Custom animation with Animate.css',
+                title: 'User Login success',
                 showClass: {
                   popup: 'animate__animated animate__fadeInDown'
                 },
@@ -37,6 +51,17 @@ const Login = () => {
               navigate(from, {replace : true});
         })
 
+    }
+
+
+    const handleValidCaptcha = (e) =>{
+      const user_captcha_value = e.target.value;
+      if(validateCaptcha(user_captcha_value)){
+         setDisabled(false);
+      }
+      else{
+           setDisabled(true);
+      }
     }
 
     return (
@@ -60,8 +85,15 @@ const Login = () => {
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered" />
          </div>
+        <div className="form-control">
+          <label className="label">
+            <LoadCanvasTemplate />
+          </label>
+          <input onBlur={handleValidCaptcha} type="text" name="captcha" placeholder="type captcha" className="input input-bordered" />
+         
+         </div>
         <div className="form-control mt-6">
-          <input  className="btn btn-primary" type="submit" value="Login" />
+          <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
         </div>
       </form>
       <p className="text-center py-2"><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
