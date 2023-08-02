@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import Swal from 'sweetalert2'
+import SocialLogin from "../../Shered/SocialLogin/SocialLogin";
 
 
 const Login = () => {
@@ -97,8 +98,9 @@ const Login = () => {
         </div>
       </form>
       <p className="text-center py-2"><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
-
+      <SocialLogin></SocialLogin>
     </div>
+   
   </div>
   </div>
         </div>
