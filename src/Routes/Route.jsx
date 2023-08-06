@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyClass from "../Pages/MyClass/MyClass";
 import Dashboard from "../Layout/Dashboard";
 import Myboard from "../Pages/Dashboard/Myboard/Myboard";
+import Payment from "../Pages/payment/Payment";
 
 
   export const router = createBrowserRouter([
@@ -42,15 +43,20 @@ import Myboard from "../Pages/Dashboard/Myboard/Myboard";
           path:'myclass',
           element: <MyClass></MyClass>
         }
+       
       ]
     },
     {
       path: 'dashboard',
-      element: <Dashboard></Dashboard>,
+      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children:[
         {
           path: 'myboard',
           element: <Myboard></Myboard>
+        },
+        {
+          path:'payment',
+          element: <Payment></Payment>
         }
       ]
     }

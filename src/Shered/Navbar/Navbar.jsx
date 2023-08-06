@@ -5,6 +5,7 @@ import { useContext } from "react";
 
 
 
+
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
  
@@ -22,7 +23,7 @@ const Navbar = () => {
   <li><Link to="/blog">Blog</Link></li>
   <li><Link to="/class">Class</Link></li>
   <li><Link to="/myclass">My Class</Link></li>
-  <li><Link to="/dashboard/myboard">Dashboard</Link></li>
+  <li><Link to="/dashboard/myboard">Instructor</Link></li>
   
  
 
@@ -61,7 +62,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Get Start</a>
+    <Link to='dashboard/payment' className="btn">Get Start</Link>
+   
  
   </div>
    </div>

@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { FaBook, FaBookOpen, FaHome, FaWallet } from "react-icons/fa";
+import { FaBook, FaBookOpen, FaHome, FaPhoneAlt, FaWallet  } from "react-icons/fa";
 
 const Dashboard = () => {
     return (
@@ -24,12 +24,12 @@ const Dashboard = () => {
       </div>
       
       <li><Link to='/'><FaHome></FaHome>Home</Link></li>
-      <li><Link><FaBook></FaBook>Add Class</Link></li>
+      <li><Link to='/myclass'><FaBook></FaBook>Add Class</Link></li>
       <li><Link><FaWallet></FaWallet>Price</Link></li>
       <div className="divider"></div>
-      <li><Link><FaBookOpen></FaBookOpen>Book</Link></li>
-      <li><Link><FaBookOpen></FaBookOpen>Class</Link></li>
-      <li><Link><FaBookOpen></FaBookOpen>Contact us</Link></li>
+     
+      <li><Link to='/class'><FaBookOpen></FaBookOpen>Class</Link></li>
+      <li><Link><FaPhoneAlt></FaPhoneAlt> Contact us</Link></li>
      
      
     </ul>
