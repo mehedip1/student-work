@@ -9,6 +9,8 @@ import Class from "../Pages/Class/Class";
 import Blog from "../Pages/Blog/Blog";
 import PrivateRoute from "./PrivateRoute";
 import MyClass from "../Pages/MyClass/MyClass";
+import Dashboard from "../Layout/Dashboard";
+import Myboard from "../Pages/Dashboard/Myboard/Myboard";
 
 
   export const router = createBrowserRouter([
@@ -42,5 +44,15 @@ import MyClass from "../Pages/MyClass/MyClass";
         }
       ]
     },
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>,
+      children:[
+        {
+          path: 'myboard',
+          element: <Myboard></Myboard>
+        }
+      ]
+    }
   ]);
 

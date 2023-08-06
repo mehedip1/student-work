@@ -22,6 +22,7 @@ const Navbar = () => {
   <li><Link to="/blog">Blog</Link></li>
   <li><Link to="/class">Class</Link></li>
   <li><Link to="/myclass">My Class</Link></li>
+  <li><Link to="/dashboard/myboard">Dashboard</Link></li>
   
  
 
