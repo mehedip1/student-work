@@ -1,6 +1,12 @@
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
+
+
+
+
 import './Banner.css'
+
+ 
 import img1 from '../../../assets/photo/img1.jpg'
 import img2 from '../../../assets/photo/img2.jpg'
 import img3 from '../../../assets/photo/img3.jpg'
@@ -37,6 +43,11 @@ const Banner = () => {
         </div>
         
         </AwesomeSlider>
+
+
+   
+
+   
     );
 };
 

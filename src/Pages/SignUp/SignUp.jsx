@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from 'sweetalert2'
+import SocialLogin from "../../Shered/SocialLogin/SocialLogin";
+
 
 
 const SignUp = () => {
@@ -21,21 +23,43 @@ const SignUp = () => {
       console.log(loggedUser);
       updateUserProfile(data.name, data.photoURL)
       .then(() =>{
-        console.log('user profile upload')
+        const savedUser = {name: data.name, email: data.email}
+        fetch('http://localhost:5000/users', {
+          method: 'POST',
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(savedUser)
+      })
+      .then(res => res.json())
+      .then(data => {
+          if(data.insertedId){
+
+
+            reset()
+
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Sing up success',
+              showConfirmButton: false,
+              timer: 1500
+            })
+
+            navigate("/")
+          
+           
+          }
+
+
+      })
       })
       .catch(err => console.log(err))
-      reset()
-
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Sing up success',
-        showConfirmButton: false,
-        timer: 1500
-      })
-      navigate("/");
+     
 
     })
+
+    
   }
 
 
@@ -83,8 +107,11 @@ const SignUp = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Sign Up</button>
         </div>
+
       </form>
+
       <p className="text-center py-2"><small><Link to="/login">Already account? Login now</Link> </small></p>
+           <SocialLogin></SocialLogin>
     </div>
   </div>
    </div>
