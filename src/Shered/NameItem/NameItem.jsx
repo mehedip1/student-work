@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const NameItem = ({item}) => {
@@ -12,7 +13,7 @@ const NameItem = ({item}) => {
     <h2 className="card-title">{name}</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     <div className="card-actions text-center">
-      <button className="btn btn-primary">Book Now</button>
+     <Link to='/login'> <button className="btn btn-primary">Book Now</button></Link>
     </div>
   </div>
      </div>

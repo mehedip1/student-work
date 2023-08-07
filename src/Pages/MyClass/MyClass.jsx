@@ -1,9 +1,11 @@
+import Class from "../Class/Class";
 
 
 const MyClass = () => {
     return (
-        <div>
-            <h2>My Class......</h2>
+        <div className="mt-5">
+           
+            <Class></Class>
         </div>
     );
 };
