@@ -12,12 +12,14 @@ import MyClass from "../Pages/MyClass/MyClass";
 import Dashboard from "../Layout/Dashboard";
 import Myboard from "../Pages/Dashboard/Myboard/Myboard";
 import Payment from "../Pages/payment/Payment";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
