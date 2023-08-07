@@ -2,32 +2,38 @@
     {
       "_id": "1",
       "name": "Json",
-      "img": "https://unsplash.com/photos/xZTScJvolYk"
+      "img": "https://unsplash.com/photos/xZTScJvolYk",
+      "email": "john.doe@example.com"
     },
     {
       "_id": "2",
       "name": "Roy ",
-      "img": "https://unsplash.com/photos/UIpFY1Umamw"
+      "img": "https://unsplash.com/photos/UIpFY1Umamw",
+      "email": "roy.doe@example.com"
     },
     {
       "_id": "3",
       "name": "Watson ",
-      "img": "https://unsplash.com/photos/6anudmpILw4"
+      "img": "https://unsplash.com/photos/6anudmpILw4",
+      "email": "watson.doe@example.com"
     },
     {
       "_id": "4",
       "name": "Allen 4",
-      "img": "https://unsplash.com/photos/orYf8p3DvCc"
+      "img": "https://unsplash.com/photos/orYf8p3DvCc",
+      "email": "allen.doe@example.com"
     },
     {
       "_id": "5",
       "name": "Max",
-      "img": "https://unsplash.com/photos/DItYlc26zVI"
+      "img": "https://unsplash.com/photos/DItYlc26zVI",
+      "email": "max.doe@example.com"
     },
     {
       "_id": "6",
       "name": "Christina",
-      "img": "https://unsplash.com/photos/c-mgSuxqpzA"
+      "img": "https://unsplash.com/photos/c-mgSuxqpzA",
+      "email": "christina.doe@example.com"
     }
   ]
   

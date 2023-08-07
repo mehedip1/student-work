@@ -14,6 +14,8 @@ import Myboard from "../Pages/Dashboard/Myboard/Myboard";
 import Payment from "../Pages/payment/Payment";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 
+import InstructorPage from "../Pages/Detalies/instructorPage";
+
 
   export const router = createBrowserRouter([
     {
@@ -44,7 +46,12 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
         {
           path:'myclass',
           element: <MyClass></MyClass>
-        }
+        },
+        {
+          path: 'instructor',
+          element: <InstructorPage></InstructorPage>
+        },
+      
        
       ]
     },
